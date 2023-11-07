@@ -1,1 +1,48 @@
-<p>form works!</p>
+<form action="#" method="GET" [formGroup]="formGroup">
+   <div class="form--header">
+      <i class="form--icon">
+         <img src="../../../assets/icons/icon-hour.png" alt="">
+      </i>
+      <span>Horário</span>
+   </div>
+   <h2 class="section--title">Qual período quer treinar?</h2>
+   <hr>
+   <div class="form-group">
+      <div class="input_wrapper">
+         <input type="radio" name="desired-time" id="morning" value="morning">
+         <label for="morning">Manhã</label>
+      </div>
+      <span>06:00 às 12:00</span>
+   </div>
+   <hr>
+   <div class="form-group">
+      <div class="input_wrapper">
+         <input type="radio" name="desired-time" id="afternoon" value="afternoon">
+         <label for="afternoon">Tarde</label>
+      </div>
+      <span>12:01 às 18:00</span>
+   </div>
+   <hr>
+   <div class="form-group">
+      <div class="input_wrapper">
+         <input type="radio" name="desired-time" id="night" value="night">
+         <label for="night">Noite</label>
+      </div>
+      <span>18:01 às 23:00</span>
+   </div>
+   <hr>
+   <div class="filters-wrapper">
+      <div class="filter">
+         <input type="checkbox" name="closed-units" id="closed-units" >
+         <label for="closed-units">Exibir unidades fechadas</label>
+      </div>
+      <div class="results-display">
+         <span>Resultados encontrados</span>
+         <output for="closed-units morning afternoon night" name="units-display">0</output>
+      </div>
+   </div>
+   <div class="form-controller">
+      <input type="submit" value="ENCONTRAR UNIDADE" (click)="onSubmit()">
+      <button type="button" id="clear-filters" (click)="onClear()">LIMPAR</button>
+   </div>
+</form>

@@ -8,6 +8,7 @@ import { FormComponent } from './components/form/form.component';
 import { LegendComponent } from './components/legend/legend.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ResultListComponent } from './components/result-list/result-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ResultListComponent } from './components/result-list/result-list.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
